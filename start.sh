@@ -11,4 +11,6 @@ VPN_ADDRESS=$(read_var VPN_ADDRESS .env)
 
 networksetup -setwebproxy "Wi-fi" $WINDOWS_NAME $PROXY_PORT
 networksetup -setsecurewebproxy "Wi-fi" $WINDOWS_NAME $PROXY_PORT
+git config --global http.proxy http://$WINDOWS_NAME:$PROXY_PORT
+git config --global https.proxy http://$WINDOWS_NAME:$PROXY_PORT
 /opt/cisco/anyconnect/bin/vpn -s connect $VPN_ADDRESS
