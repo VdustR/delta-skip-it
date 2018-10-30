@@ -30,9 +30,19 @@ Windows and another unix like device should in the same local network.
 
 ## Advanced
 
+You have to restart your Squid to applied `squid.conf`.
+
+### DNS
+
+Use the same DNS as your windows PC setting:
+
+```text
+dns_nameservers 10.136.156.1 8.8.8.8 208.67.222.222
+```
+
 ### Local Hosts File
 
-You can insert followed statement to make hosts file available in `squid.conf` and restart Squid:
+Apply hosts file in your windows PC:
 
 ```text
 hosts_file C:/Windows/System32/drivers/etc/hosts
